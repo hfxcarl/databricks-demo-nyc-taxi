@@ -17,6 +17,7 @@ This project demonstrates a simple ETL pipeline using Azure Databricks and PySpa
 
 ## Project Structure
 
+```text
 databricks-demo-nyc-taxi/
 ├── notebooks/
 │ └── nyc_taxi_etl_demo.py
@@ -25,7 +26,7 @@ databricks-demo-nyc-taxi/
 ├── README.md
 ├── requirements.txt
 └── LICENSE
-
+```
 
 ## How to Run
 
