@@ -23,6 +23,7 @@ databricks-demo-nyc-taxi/
 │ └── nyc_taxi_etl_demo_simple.py
 ├── data/
 │ └── nyc_taxi_sample.csv
+│ └── get_sample_data.sh
 ├── README.md
 ├── requirements.txt
 └── LICENSE
