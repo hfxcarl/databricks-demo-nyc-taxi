@@ -20,7 +20,7 @@ This project demonstrates a simple ETL pipeline using Azure Databricks and PySpa
 ```text
 databricks-demo-nyc-taxi/
 ├── notebooks/
-│ └── nyc_taxi_etl_demo.py
+│ └── nyc_taxi_etl_demo_simple.py
 ├── data/
 │ └── nyc_taxi_sample.csv
 ├── README.md
@@ -47,12 +47,10 @@ databricks-demo-nyc-taxi/
 NYC TLC Trip Record Data:  
 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
-```bash
-# Download full file
-curl -o yellow_tripdata_2019-01.csv https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2019-01.csv
+Download 10,000 lines of sample data: 
 
-# Extract just the first 10,000 rows + header (for demo)
-head -n 10001 yellow_tripdata_2019-01.csv > ./data/nyc_taxi_sample.csv
+```bash
+./data/get_sample_data.sh
 ```
 
 ## License
