@@ -35,10 +35,26 @@ databricks-demo-nyc-taxi/
 3. Upload `nyc_taxi_sample.csv` to DBFS
 4. Run all cells
 
+## Screenshot (Simple example)
+
+## Screenshot
+
+![Databricks Demo Screenshot](images/databricks_demo_simple.png)
+
+
+
 ## Dataset Reference
 
 NYC TLC Trip Record Data:  
 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+
+```bash
+# Download full file
+curl -o yellow_tripdata_2019-01.csv https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2019-01.csv
+
+# Extract just the first 10,000 rows + header (for demo)
+head -n 10001 yellow_tripdata_2019-01.csv > ./data/nyc_taxi_sample.csv
+```
 
 ## License
 

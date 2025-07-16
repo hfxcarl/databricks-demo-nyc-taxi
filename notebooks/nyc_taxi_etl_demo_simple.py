@@ -1,12 +1,28 @@
-# Databricks notebook source
-# NYC Taxi ETL Demo
+ # Databricks notebook source
+# MAGIC %md
+# MAGIC # NYC Taxi Data ETL Pipeline Demo
 
 # COMMAND ----------
 
-# 1. Load CSV Data
+# MAGIC %md
+# MAGIC ## 1. Data Ingestion & Initial Exploration
 
-df = spark.read.option("header", True).option("inferSchema", True).csv("/FileStore/data/nyc_taxi_sample.csv")
-df.show(5)
+# COMMAND ----------
+dp = "demo_nyc_taxi.default"
+
+data_store = "/Volumes/demo_nyc_taxi/default/demo_taxi_volume/nyc_taxi_sample.csv"
+
+# Load the raw CSV data
+df_raw = spark.read.option("header", True).option("inferSchema", True).csv(data_store)
+
+# Display basic information about the dataset
+print(f"Dataset shape: {df_raw.count()} rows, {len(df_raw.columns)} columns")
+print(f"Schema:")
+df_raw.printSchema()
+
+# Show sample data
+print("\nSample data:")
+df_raw.show(5, truncate=False)
 
 # COMMAND ----------
 
@@ -14,7 +30,7 @@ df.show(5)
 
 from pyspark.sql.functions import col, to_timestamp
 
-df_clean = df.select(
+df_clean = df_raw.select(
     col("passenger_count").cast("int"),
     col("trip_distance").cast("double"),
     to_timestamp(col("tpep_pickup_datetime")).alias("pickup_time"),
