@@ -15,7 +15,16 @@ This project demonstrates a simple ETL pipeline using Azure Databricks and PySpa
 - PySpark
 - Delta Lake
 
-<pre> ## Project Structure ``` databricks-demo-nyc-taxi/ ├── notebooks/ │ └── nyc_taxi_etl_demo.py ├── data/ │ └── nyc_taxi_sample.csv ├── README.md ├── requirements.txt └── LICENSE ``` </pre>
+## Project Structure
+
+databricks-demo-nyc-taxi/
+├── notebooks/
+│ └── nyc_taxi_etl_demo.py
+├── data/
+│ └── nyc_taxi_sample.csv
+├── README.md
+├── requirements.txt
+└── LICENSE
 
 
 ## How to Run
