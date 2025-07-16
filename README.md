@@ -39,8 +39,6 @@ databricks-demo-nyc-taxi/
 
 ## Screenshot
 
-![Databricks Demo Test Load Screenshot](images/databricks_demo_simple.png)
-
 ![Databricks Demo Run Screenshot](images/databricks_demo_run.png)
 
 
